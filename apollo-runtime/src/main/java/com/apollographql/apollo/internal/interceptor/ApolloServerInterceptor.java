@@ -157,7 +157,7 @@ import static com.apollographql.apollo.api.internal.Utils.checkNotNull;
         .endObject()
         .endObject();
     if (writeQueryDocument) {
-      jsonWriter.name("query").value(operation.queryDocument().replaceAll("\\n", ""));
+      jsonWriter.name("query").value(operation.queryDocument());
     }
     jsonWriter.endObject();
     jsonWriter.close();
